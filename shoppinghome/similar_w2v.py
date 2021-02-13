@@ -8,9 +8,9 @@ import pickle
 import joblib
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-feature_list_path = os.path.join(BASE_DIR,'mlfiles\\tfidf.pickle')
-filenames_path = os.path.join(BASE_DIR,'mlfiles\\filenames.pickle')
-tfidf_vectorizer_path = os.path.join(BASE_DIR,'mlfiles\\tfidfvectorizer.pkl')
+feature_list_path = os.path.join(BASE_DIR,'mlfiles/tfidf.pickle')
+filenames_path = os.path.join(BASE_DIR,'mlfiles/filenames.pickle')
+tfidf_vectorizer_path = os.path.join(BASE_DIR,'mlfiles/tfidfvectorizer.pkl')
 
 feature_list_tfidf = pickle.load(open(feature_list_path, 'rb'))
 filenames = pickle.load(open(filenames_path, 'rb'))
