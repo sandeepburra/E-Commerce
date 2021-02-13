@@ -26,7 +26,7 @@ SECRET_KEY = '(dsk5fsvh-sf!z=1mlw00+dfjcnz5(vm(k#l-6+o+noaotfh79'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['calm-gorge-48165.herokuapp.com']
 
 
 # Application definition
