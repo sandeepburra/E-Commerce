@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'inevitable.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'newdata',
-        'USER' : 'postgres',
-        'PASSWORD' : '1234',
-        'HOST' : 'localhost'
+        'NAME': 'dc7gt1758qjhl4',
+        'USER' : 'elpwbneewgiygn',
+        'PASSWORD' : 'd408bd1404707b0bf2224910678cec7d79cbc6432f3f9eaf20c074047ecb8046',
+        'HOST' : 'ec2-3-222-11-129.compute-1.amazonaws.com'
           }
 }
 
