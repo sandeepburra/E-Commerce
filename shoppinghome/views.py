@@ -61,7 +61,8 @@ def uploaded(request):
         if form.is_valid():
             form.save()
             #print(RandomFileName.__call__.name)
-            imagelist = get_similar_products_search(RandomFileName.__call__.name,30)
+            Uploaded_path = "https://sandeepfileuploads.s3.amazonaws.com/" + RandomFileName.__call__.name
+            imagelist = get_similar_products_new(Uploaded_path,30)
     
             products2 = Product.objects.filter(product_img__in = imagelist)
             return render(request, 'product-page.html',{"imlist" : products2})

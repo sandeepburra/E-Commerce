@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,6 @@ DATABASES = {
         'PASSWORD' : 'd408bd1404707b0bf2224910678cec7d79cbc6432f3f9eaf20c074047ecb8046',
         'HOST' : 'ec2-3-222-11-129.compute-1.amazonaws.com'
           }
-   
     
     
 }
@@ -134,7 +134,20 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+"""
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
-
+"""
 MEDIA_URL = '/pics/'
 MEDIA_ROOT =os.path.join(BASE_DIR, 'pics')
+
+#S3 BUCKETS CONFIG
+
+AWS_ACCESS_KEY_ID = 'AKIAXSSKRJNKZ4XDWLGX'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'sandeepfileuploads'
+AWS_S3_REGION_NAME = 'us-east-2'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+

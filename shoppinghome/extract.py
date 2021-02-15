@@ -5,16 +5,18 @@ from numpy.linalg import norm
 import tensorflow as tf
 from io import BytesIO
 from PIL import Image
-from urllib import request
+from urllib.request import Request, urlopen
 
 graph = tf.get_default_graph()
 
 
 model = ResNet50(weights='imagenet', include_top=False,pooling='avg',
                  input_shape=(224, 224, 3))
-def extract_features(URL):    
+def extract_features(URL):
+    print(URL)    
     input_shape = (224, 224, 3)
-    res = request.urlopen(URL).read()
+    req = Request(URL, headers={'User-Agent': 'Mozilla/5.0'})
+    res = urlopen(req).read()
     img = Image.open(BytesIO(res)).resize((input_shape[0], input_shape[1]))
     img_array = image.img_to_array(img)
     expanded_img_array = np.expand_dims(img_array, axis=0)
