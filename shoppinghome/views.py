@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from .models import Product, Image
-from .recommendation import get_similar_products_new
+from .recommendation import get_similar_products_new,get_similar_products_search
 from .imtitle import get_similar_products_imtitle
 from .tfidf import tfidf_model
 from .form import ImageForm
@@ -61,7 +61,7 @@ def uploaded(request):
         if form.is_valid():
             form.save()
             #print(RandomFileName.__call__.name)
-            imagelist = get_similar_products_new(RandomFileName.__call__.name,30)
+            imagelist = get_similar_products_search(RandomFileName.__call__.name,30)
     
             products2 = Product.objects.filter(product_img__in = imagelist)
             return render(request, 'product-page.html',{"imlist" : products2})

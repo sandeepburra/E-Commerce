@@ -24,3 +24,15 @@ def extract_features(URL):
     normalized_features = flattened_features / norm(flattened_features)
     normalized_features = normalized_features.reshape((1,2048))
     return normalized_features
+def extract_features_search(URL):    
+    input_shape = (224, 224, 3)
+    img = image.load_img(URL, target_size=(input_shape[0], input_shape[1]))
+    img_array = image.img_to_array(img)
+    expanded_img_array = np.expand_dims(img_array, axis=0)
+    preprocessed_img = preprocess_input(expanded_img_array)
+    with graph.as_default():
+        features = model.predict(preprocessed_img)
+    flattened_features = features.flatten()
+    normalized_features = flattened_features / norm(flattened_features)
+    normalized_features = normalized_features.reshape((1,2048))
+    return normalized_features
