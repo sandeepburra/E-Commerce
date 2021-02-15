@@ -12,7 +12,6 @@ filenames_path = os.path.join(BASE_DIR,'mlfiles/filenames.pickle')
 feature_list_cnn = pickle.load(open(feature_list_path, 'rb'))
 filenames = pickle.load(open(filenames_path, 'rb'))
 def get_similar_products_new(img_path1, num_results):
-   
     fv = extract_features(img_path1)
     pairwise_dist = pairwise_distances(feature_list_cnn, fv)
 

@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse
 from .models import Product, Image
 from .recommendation import get_similar_products_new
 from .imtitle import get_similar_products_imtitle
-from .similar_w2v import tfidf_model
+from .tfidf import tfidf_model
 from .form import ImageForm
 from .helpers import RandomFileName
 from .catagories import get_length
@@ -32,10 +32,11 @@ def similar(request, qid):
     query_image= Product.objects.get(id=qid)
     
 
-    imagelist = get_similar_products_new(query_image.product_img,30)
+    imagelist = get_similar_products_new(query_image.product_Url,30)
     
-    
+
     products2 = Product.objects.filter(product_img__in = imagelist)
+
     
     return render(request, 'detail-page.html', {"current_image" : query_image, "imlist" : products2})
 
@@ -48,7 +49,7 @@ def similartitle(request, qid):
 
 def similarimtitle(request, qid):
     query_image= Product.objects.get(id=qid)
-    imagelist = get_similar_products_imtitle(query_image.product_img,query_image.title,30)
+    imagelist = get_similar_products_imtitle(query_image.product_Url,query_image.title,30)
     products2 = Product.objects.filter(product_img__in = imagelist)
     
     return render(request, 'detail-page3.html', {"current_image" : query_image,"imlist" : products2})

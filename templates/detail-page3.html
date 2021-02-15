@@ -100,7 +100,7 @@
         <!--Grid column-->
         <div class="col-md-6 mb-4">
 
-          <img src="{{current_image.product_img}}" class="img-fluid" alt="">
+          <img src="{{current_image.product_Url}}" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
@@ -172,7 +172,7 @@
 
               <!--Card image-->
               <div class="view overlay">
-                <img src="/pics/{{product.product_img}}" class="card-img-top"
+                <img src="{{product.product_Url}}" class="card-img-top"
                   alt="" width="500" height="300">
                 <a>
                   <div class="mask rgba-white-slight"></div>
@@ -292,13 +292,14 @@
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+   <!-- JQuery -->
+   <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+   <!-- Bootstrap tooltips -->
+   <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+   <!-- Bootstrap core JavaScript -->
+   <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+   <!-- MDB core JavaScript -->
+   <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
   <!-- Initializations -->
   <script type="text/javascript">
     // Animations initialization

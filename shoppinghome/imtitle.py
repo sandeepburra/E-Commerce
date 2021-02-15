@@ -8,7 +8,7 @@ import joblib
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 feature_list_path = os.path.join(BASE_DIR,'mlfiles/features.pickle')
-filenames_path = os.path.join(BASE_DIR,'mlfiles/filenamesNew.pickle')
+filenames_path = os.path.join(BASE_DIR,'mlfiles/filenames.pickle')
 
 feature_list_cnn = pickle.load(open(feature_list_path, 'rb'))
 filenames = pickle.load(open(filenames_path, 'rb'))
