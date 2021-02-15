@@ -2,22 +2,19 @@ from keras.applications.resnet50 import ResNet50, preprocess_input
 from keras.preprocessing import image
 import numpy as np
 from numpy.linalg import norm
-from pathlib import Path
-import os
 import tensorflow as tf
+from io import BytesIO
+import urllib
 
 graph = tf.get_default_graph()
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-pic_dir = os.path.join(BASE_DIR,'pics')
+
 model = ResNet50(weights='imagenet', include_top=False,pooling='avg',
                  input_shape=(224, 224, 3))
-def extract_features(img_path):    
-    
-    img_path = os.path.join(pic_dir,img_path)
+def extract_features(URL):    
     input_shape = (224, 224, 3)
-    img = image.load_img(img_path, target_size=(
-        input_shape[0], input_shape[1]))
+    with urllib.request.urlopen(URL) as url:
+        img = image.load_img(BytesIO(url.read()), target_size=(input_shape[0], input_shape[1]))
     img_array = image.img_to_array(img)
     expanded_img_array = np.expand_dims(img_array, axis=0)
     preprocessed_img = preprocess_input(expanded_img_array)
