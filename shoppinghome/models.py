@@ -12,6 +12,6 @@ class Product(models.Model):
     product_Url = models.CharField(max_length=500)
 
 class Image(models.Model):
-    image = models.ImageField(upload_to = RandomFileName('logos'))
+    image = models.ImageField(upload_to = RandomFileName('pics'))
 
 

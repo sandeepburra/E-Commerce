@@ -4,7 +4,8 @@ import numpy as np
 from numpy.linalg import norm
 import tensorflow as tf
 from io import BytesIO
-import urllib
+from PIL import Image
+from urllib import request
 
 graph = tf.get_default_graph()
 
@@ -13,8 +14,8 @@ model = ResNet50(weights='imagenet', include_top=False,pooling='avg',
                  input_shape=(224, 224, 3))
 def extract_features(URL):    
     input_shape = (224, 224, 3)
-    with urllib.request.urlopen(URL) as url:
-        img = image.load_img(BytesIO(url.read()), target_size=(input_shape[0], input_shape[1]))
+    res = request.urlopen(URL).read()
+    img = Image.open(BytesIO(res)).resize((input_shape[0], input_shape[1]))
     img_array = image.img_to_array(img)
     expanded_img_array = np.expand_dims(img_array, axis=0)
     preprocessed_img = preprocess_input(expanded_img_array)
