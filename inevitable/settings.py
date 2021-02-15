@@ -80,18 +80,18 @@ DATABASES = {
     
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'newdata',
-        'USER' : 'postgres',
-        'PASSWORD' : '1234',
-        'HOST' : 'localhost'
+        'NAME': 'dc7gt1758qjhl4',
+        'USER' : 'elpwbneewgiygn',
+        'PASSWORD' : 'd408bd1404707b0bf2224910678cec7d79cbc6432f3f9eaf20c074047ecb8046',
+        'HOST' : 'ec2-3-222-11-129.compute-1.amazonaws.com'
           }
     
 }
-"""
+
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
-"""
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
