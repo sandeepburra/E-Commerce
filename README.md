@@ -4,21 +4,13 @@
 
 - Demo
 - Overview
-- Motivation
 - Technical Aspect
-- Installation
-- Run
 - Deployement on Heroku
-- Directory Tree
-- To Do
-- Bug / Feature Request
 - Technologies Used
-- Team
-- License
-- Credits
+
 
 ## Demo
-Link
+
 
 ## Overview
 This is a content based Recommendation System Django app. I have used product title and images are the contents for this system. I have created seperate pages for Recommendations using title and images. 
@@ -26,8 +18,6 @@ Recommendations using title is based on the TF-IDF vectorisation and using image
 
 I have added two search buttons, one is for image input and other is for text input. A user can get recommendations, by uploading an image or searching for specific text
 
-Motivation
-Recently i met my friend in a function, i liked his shirt. I asked him to send a link where he has bought, but Unfortunately he bought that in some local outlet. I captured that shirt and searched in google image but i got similar images but i couldnt any links to online store. That time i realised the importance
 
 
 ## Technical Aspect
