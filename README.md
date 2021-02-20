@@ -71,8 +71,13 @@ After finishing the Django app, i have created a repository in github. Heroku us
 I have used amazon S3 to store files uploaded from user. To access this files from amazon s3 we need to modify some config var in heroku
 
 Technologies used:
-- Python
-- Django
-- Amazon S3
-- Heroku
+
+![Alt text](/pics/logos/python.JPG?raw=true "Optional Title")
+![Alt text](/pics/logos/keras.JPG?raw=true "Optional Title")
+
+![Alt text](/pics/logos/django.JPG?raw=true "Optional Title")
+![Alt text](/pics/logos/amazons3.JPG?raw=true "Optional Title")
+
+![Alt text](/pics/logos/heroku.JPG?raw=true "Optional Title")
+
 
