@@ -4,9 +4,9 @@
 
 
 - [Overview](#overview)
-- Technical Aspect
-- Deployement on Heroku
-- Technologies Used
+- [Technical Aspect](#Technical Aspect)
+- [Deployement](#Deployement)
+- [Technologies Used](#Technologies used)
 
 
 ## Overview
@@ -67,7 +67,7 @@ I have used amazon S3 to store files uploaded from user. To access this files fr
 
 ![Alt text](/pics/logos/herokuConfig.JPG?raw=true "Optional Title")
 
-Technologies used:
+## Technologies used:
 
 ![Alt text](/pics/logos/python.JPG?raw=true "Optional Title")
 ![Alt text](/pics/logos/keras.JPG?raw=true "Optional Title")
