@@ -12,8 +12,12 @@
 ## Demo
 
 
+
 ## Overview
 This is a content based Recommendation System Django app. I have used product title and images are the contents for this system. I have created seperate pages for Recommendations using title and images. 
+
+![Alt text](/pics/logos/overview.JPG?raw=true "Optional Title")
+
 Recommendations using title is based on the TF-IDF vectorisation and using images based on Resnet.
 
 I have added two search buttons, one is for image input and other is for text input. A user can get recommendations, by uploading an image or searching for specific text
@@ -28,8 +32,8 @@ This project is divided into two parts:
 
 ## Building a recommendation system
 Recommendation systems are mainly of two types
-### Collaborative filtering
-### content based filtering
+***Collaborative filtering***
+***content based filtering***
 ## Collaborative filtering:
 Collaborative recommender systems aggregate ratings or recommendations of objects, recognize commonalities between the users on the basis of their ratings, and generate new recommendations based on inter-user comparisons.
 ## content based filtering:
@@ -54,11 +58,18 @@ There are two search boxes.
 ***Image input:***
 It takes inut from user an send the resenet architecture to get the features, later model will find our which ever the product from database is similar to this and retuen top results to the user.
 
+![Alt text](/pics/logos/Image_search.JPG?raw=true "Optional Title")
+
 ***text input:***
 It takes some keywords from the user and return products whose title is similar to the entered keywords.
+
+![Alt text](/pics/logos/title_search.JPG?raw=true "Optional Title")
+
 ### Deploying in heroku
 After finishing the Django app, i have created a repository in github. Heroku uses this repo to deploy.
 I have used amazon S3 to store files uploaded from user. To access this files from amazon s3 we need to modify some config var in heroku
+
+![Alt text](/pics/logos/herokuConfig.JPG?raw=true "Optional Title")
 
 Technologies used:
 
