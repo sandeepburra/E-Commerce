@@ -2,15 +2,11 @@
 
 ## Table of Content
 
-- Demo
-- Overview
+
+- [Overview](##overview)
 - Technical Aspect
 - Deployement on Heroku
 - Technologies Used
-
-
-## Demo
-
 
 
 ## Overview
