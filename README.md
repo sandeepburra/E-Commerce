@@ -4,9 +4,9 @@
 
 
 - [Overview](#overview)
-- [Technical Aspect](#Technical Aspect)
+- [Technical Aspect](#Technical-Aspect)
 - [Deployement](#Deployement)
-- [Technologies Used](#Technologies used)
+- [Technologies Used](#Technologies-used)
 
 
 ## Overview
