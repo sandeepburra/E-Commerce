@@ -33,7 +33,7 @@ Recommendation systems are mainly of two types
 ## Collaborative filtering:
 Collaborative recommender systems aggregate ratings or recommendations of objects, recognize commonalities between the users on the basis of their ratings, and generate new recommendations based on inter-user comparisons.
 ## content based filtering:
-A content based recommender works with data that the user provides, either explicitly (rating) or implicitly (clicking on a link). Based on that data, a user profile is generated, which is then used to make suggestions to the user. 
+As its name suggests, we do content based recommendation, means its based on tittle text,Description text, images. 
 
 I dont have user data to do colloberative filtering, so im just using content based filtering for my web app.
 
